@@ -11,3 +11,5 @@ Current dataset:
 - `raw/gsc/reviews/may-2026`: May-only GSC export used for before-update top pages.
 - `raw/gsc/reviews/june-2026`: June-only GSC export used for after-update top pages.
 - `processed/reviews-gsc-performance.json` and `.js`: public aggregated dataset used by the dashboard.
+- `raw/gsc/offers/full-mar-jun-2026`: Google Search Console export for supplier offer sheets, covering the launch/growth period.
+- `processed/offers-gsc-performance.json` and `.js`: public percentage-only launch trend for new offer pages, using indexed/smoothed movement instead of raw values.

@@ -130,3 +130,29 @@ Top pages:
 - Use one formula accordion containing internal colored explanation cards, not several small formula accordions.
 - When showing four-step workflows such as Collect, Clean, Normalize and Cluster, give each step a different color treatment.
 - Use two visual cards for review user paths: vertical user with `↕️` and horizontal comparison user with `↔️`.
+
+## Current Offer Sheets Cluster Decisions
+
+Dataset:
+
+- `analytics-data/raw/gsc/offers/full-mar-jun-2026/`
+- `analytics-data/processed/offers-gsc-performance.json`
+- `analytics-data/processed/offers-gsc-performance.js`
+
+Date range:
+
+- March 17, 2026 to June 28, 2026.
+
+Comparison:
+
+- These are new pages, so do not describe the chart as a classic before/after update.
+- Use the first active 14 days as the launch baseline.
+- Compare the latest active 14 days with the launch baseline.
+- The chart uses 7-day smoothed percentage movement against the launch baseline.
+
+Public reporting:
+
+- Show only percentage/relative movements, never raw clicks, impressions, CTR or average-position values.
+- It is acceptable to show public URLs from `Pages.csv`, but do not attach performance values to them.
+- Explain the chart as a launch trend: visibility can grow while CTR/ranking signals may still show optimization opportunities.
+- If URL-level phase comparison is needed later, request a page-by-date export; total-period `Pages.csv` is not enough for before/after or launch/latest URL movement.

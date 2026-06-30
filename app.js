@@ -120,6 +120,7 @@ const projects = [
         body: `<p>The page helps users compare an offer without jumping between supplier websites, generic articles and price tables. It centralizes the main decision points: <strong>how much it costs, what conditions apply, who it fits, what changed over time and what to check before activating</strong>.</p><p>The price-history module is especially useful because it gives context: for fixed offers, it explains that the public offer version can change for new activations without changing already signed contracts; for indexed offers, it can separate the index movement from the all-in monthly estimate.</p><p>From an SEO perspective, these sheets become a structured layer of a wider supplier database: <strong>offer pages, review pages, mother pages and comparison pages</strong> can all connect around the same provider and intent.</p>`
       }
     ],
+    performanceKey: "offers",
     performancePlaceholder: "Once you provide the GSC cluster export, this panel can show <strong>percentage-only visibility, click-efficiency and position movements</strong> for all offer pages created or refreshed.",
     urlPlaceholder: "Future URL inventory: offer pages grouped by supplier, offer type and creation/modification date.",
     demos: [
@@ -418,18 +419,16 @@ const projectOrder = [
 
 const projectFilterOptions = [
   { id: "all", label: "Overview" },
-  { id: "content", label: "Content SEO" },
-  { id: "ai", label: "AI automation" },
-  { id: "data", label: "Data analysis" },
-  { id: "ux", label: "UX modules" },
-  { id: "local", label: "Local SEO" },
-  { id: "offpage", label: "Off-page SEO" },
-  { id: "social", label: "Social / creator" }
+  { id: "content", label: "Content" },
+  { id: "technical", label: "Technical / AI" }
 ];
 
 const projectPortfolioMeta = {
   reviews: {
-    areas: ["content", "ai", "data", "ux"],
+    visualTheme: "content-seo",
+    icon: "★",
+    areas: ["content", "technical"],
+    cardSummary: "Review pages powered by real comments and scoring.",
     story: {
       main: "I redesigned supplier review pages as <strong>evidence-led SEO assets</strong>, using public customer comments instead of a generic editorial opinion format.",
       problem: "The SERP showed that users often trusted forums, Reddit threads or Facebook discussions more than standard review pages, both for us and for competitors.",
@@ -439,7 +438,10 @@ const projectPortfolioMeta = {
     }
   },
   offers: {
-    areas: ["content", "data", "ux"],
+    visualTheme: "content-seo",
+    icon: "€",
+    areas: ["content"],
+    cardSummary: "Offer pages with prices, context and HTML modules.",
     story: {
       main: "I built supplier offer pages for high-intent energy searches where users need prices, conditions and activation context quickly.",
       problem: "Offer pages can easily become thin or repetitive because many suppliers use similar pricing language, FAQ patterns and commercial claims.",
@@ -449,7 +451,10 @@ const projectPortfolioMeta = {
     }
   },
   sportelli: {
-    areas: ["local", "data", "ux"],
+    visualTheme: "technical-ai",
+    icon: "⌖",
+    areas: ["technical"],
+    cardSummary: "Local map prototype from branch URL data.",
     story: {
       main: "I designed an interactive branch-map prototype to make a large local-SEO URL inventory easier to navigate.",
       problem: "Flat branch lists are hard to use, and branch-intent traffic can be local, navigational or support-oriented rather than immediately commercial.",
@@ -459,7 +464,10 @@ const projectPortfolioMeta = {
     }
   },
   summary: {
-    areas: ["content", "ux"],
+    visualTheme: "content-seo",
+    icon: "↗",
+    areas: ["content"],
+    cardSummary: "Review blocks for mother pages and internal links.",
     story: {
       main: "I created compact review-summary blocks for supplier mother pages, connecting existing pages to the new review ecosystem.",
       problem: "Mother pages could be important SEO assets but lacked visible review proof, making internal links toward review pages less compelling.",
@@ -469,7 +477,10 @@ const projectPortfolioMeta = {
     }
   },
   ranking: {
-    areas: ["content", "data", "ux"],
+    visualTheme: "content-seo",
+    icon: "№",
+    areas: ["content", "technical"],
+    cardSummary: "Supplier ranking built from scores and sentiment.",
     story: {
       main: "I updated a provider-ranking page so the comparison was grounded in the same real-comment system used by individual reviews.",
       problem: "A best-supplier page risks feeling generic if rankings are not supported by visible evidence or a clear scoring method.",
@@ -479,7 +490,10 @@ const projectPortfolioMeta = {
     }
   },
   "nrj2-analysis": {
-    areas: ["data", "local"],
+    visualTheme: "technical-ai",
+    icon: "◈",
+    areas: ["technical"],
+    cardSummary: "SEO diagnosis across URL families and intent.",
     story: {
       main: "I worked on an SEO and business diagnosis for energia-luce.it, connecting organic visibility with URL families and business signals.",
       problem: "Some pages can generate traffic or calls without producing useful commercial outcomes, especially when intent is local or support-oriented.",
@@ -489,7 +503,10 @@ const projectPortfolioMeta = {
     }
   },
   scraping: {
-    areas: ["ai", "data"],
+    visualTheme: "technical-ai",
+    icon: "⌁",
+    areas: ["technical"],
+    cardSummary: "Clean comment pipeline for review evidence.",
     story: {
       main: "I built the data-collection layer behind the review system, focused on gathering usable public customer comments.",
       problem: "Raw social data is noisy: spam, duplicates, vague mentions, off-topic posts and comments without decision value can weaken the final page.",
@@ -499,7 +516,10 @@ const projectPortfolioMeta = {
     }
   },
   offpage: {
-    areas: ["offpage", "content"],
+    visualTheme: "content-seo",
+    icon: "⇄",
+    areas: ["content"],
+    cardSummary: "News-based articles for outreach and backlinks.",
     story: {
       main: "I wrote news-based off-page articles designed for outreach and backlink acquisition toward priority pages.",
       problem: "Backlink content can become weak or promotional if it is not connected to real news, reliable facts and natural anchors.",
@@ -509,7 +529,10 @@ const projectPortfolioMeta = {
     }
   },
   "social-media": {
-    areas: ["social"],
+    visualTheme: "social-content",
+    icon: "●",
+    areas: ["content"],
+    cardSummary: "Event and social content for Ladywoods / BGSA.",
     story: {
       main: "I supported social media and event communication for Ladywoods / BGSA, mainly through live content and documentation.",
       problem: "Event content has to be produced quickly while still being useful for promotion, archive and partner communication.",
@@ -519,7 +542,10 @@ const projectPortfolioMeta = {
     }
   },
   creator: {
-    areas: ["social", "content"],
+    visualTheme: "social-content",
+    icon: "▶",
+    areas: ["content"],
+    cardSummary: "Creator work across communities and formats.",
     story: {
       main: "I include independent creator work because it shows long-term audience thinking across gaming and football communities.",
       problem: "Content has to answer recurring questions, hold attention and adapt to platform behavior, not only exist as a finished post.",
@@ -562,9 +588,12 @@ const performanceSection = document.querySelector("#sectionPerformance");
 const performanceTitle = document.querySelector("#performanceTitle");
 const performancePeriod = document.querySelector("#performancePeriod");
 const performanceNarrative = document.querySelector("#performanceNarrative");
+const performanceBaselineLabel = document.querySelector("#performanceBaselineLabel");
+const performanceLegendSplit = document.querySelector("#performanceLegendSplit");
 const performanceChartMode = document.querySelector("#performanceChartMode");
 const performanceChart = document.querySelector("#performanceChart");
 const chartTooltip = document.querySelector("#chartTooltip");
+const chartFootnote = document.querySelector("#chartFootnote");
 const performanceComparison = document.querySelector("#performanceComparison");
 const topPagesPanel = document.querySelector("#topPagesPanel");
 const futureDataSection = document.querySelector("#sectionInventory");
@@ -695,6 +724,10 @@ function getAreaLabel(areaId) {
   return projectFilterOptions.find((option) => option.id === areaId)?.label || areaId;
 }
 
+function getProjectThemeClass(project) {
+  return `project-box--${project.visualTheme || "content-seo"}`;
+}
+
 function getFilteredProjects() {
   if (activeProjectFilter === "all") {
     return projects;
@@ -736,11 +769,14 @@ function renderProjectGrid() {
   const visibleProjects = getFilteredProjects();
 
   projectGrid.innerHTML = visibleProjects.map((project, index) => `
-    <a class="project-box" href="#project/${project.id}" aria-label="Open ${project.title}" style="--reveal-index:${index}">
-      <span class="project-box__index">${String(index + 1).padStart(2, "0")}</span>
+    <a class="project-box ${getProjectThemeClass(project)}" href="#project/${project.id}" aria-label="Open ${project.title}" style="--reveal-index:${index}">
+      <span class="project-box__top">
+        <span class="project-box__index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="project-box__icon" aria-hidden="true">${project.icon || "•"}</span>
+      </span>
       <span class="project-box__category">${project.category}</span>
       <strong>${project.shortTitle}</strong>
-      <span class="project-box__summary">${project.summary.replace(/<[^>]*>/g, "")}</span>
+      <span class="project-box__summary">${project.cardSummary || project.summary.replace(/<[^>]*>/g, "")}</span>
       <span class="project-box__footer">
         <span class="project-area-tags">
           ${(project.areas || []).map((area) => `<i>${getAreaLabel(area)}</i>`).join("")}
@@ -888,6 +924,9 @@ function renderPerformance(project, dataset) {
   performanceSection.hidden = false;
   performanceTitle.textContent = dataset.title;
   performancePeriod.textContent = dataset.source.dateRange;
+  performanceBaselineLabel.textContent = dataset.chartBaseline?.label || "Percentage baseline";
+  performanceLegendSplit.textContent = dataset.update?.legendLabel || dataset.update?.chartLabel || dataset.update?.label || "Performance split";
+  chartFootnote.textContent = dataset.chartFootnote || "Hover or tap the chart to inspect each date. The public view uses percentage movement only, not raw Search Console values.";
   performanceNarrative.innerHTML = `
     <p>${dataset.narrative.summary}</p>
     ${dataset.narrative.insights?.length ? `<ul>
@@ -895,28 +934,20 @@ function renderPerformance(project, dataset) {
     </ul>` : ""}
   `;
 
-  performanceComparison.innerHTML = `
-    <article class="${deltas.clickTrend.direction === "improved" ? "is-improved" : "is-declined"}">
-      <span>Click trend</span>
-      <strong>${formatSignedPercent(deltas.clickTrend.percent)}</strong>
-      <p>daily average variation after the update</p>
+  const metricCards = dataset.metricCards || [
+    { label: "Click trend", value: deltas.clickTrend.percent, direction: deltas.clickTrend.direction, description: "daily average variation after the update" },
+    { label: "Impression trend", value: deltas.impressionTrend.percent, direction: deltas.impressionTrend.direction, description: "daily visibility variation after the update" },
+    { label: "CTR trend", value: deltas.ctrTrend.percent, direction: deltas.ctrTrend.direction, description: "relative click-through variation" },
+    { label: "Position trend", value: deltas.positionTrend.percent, direction: deltas.positionTrend.direction, description: "relative improvement, lower position is better" }
+  ];
+
+  performanceComparison.innerHTML = metricCards.map((card) => `
+    <article class="${card.direction === "improved" ? "is-improved" : "is-declined"}">
+      <span>${escapeHtml(card.label)}</span>
+      <strong>${formatSignedPercent(card.value)}</strong>
+      <p>${escapeHtml(card.description)}</p>
     </article>
-    <article class="${deltas.impressionTrend.direction === "improved" ? "is-improved" : "is-declined"}">
-      <span>Impression trend</span>
-      <strong>${formatSignedPercent(deltas.impressionTrend.percent)}</strong>
-      <p>daily visibility variation after the update</p>
-    </article>
-    <article class="${deltas.ctrTrend.direction === "improved" ? "is-improved" : "is-declined"}">
-      <span>CTR trend</span>
-      <strong>${formatSignedPercent(deltas.ctrTrend.percent)}</strong>
-      <p>relative click-through variation</p>
-    </article>
-    <article class="${deltas.positionTrend.direction === "improved" ? "is-improved" : "is-declined"}">
-      <span>Position trend</span>
-      <strong>${formatSignedPercent(deltas.positionTrend.percent)}</strong>
-      <p>relative improvement, lower position is better</p>
-    </article>
-  `;
+  `).join("");
 
   if (dataset.pageMovements?.length) {
     renderPageMovements(dataset);
@@ -953,6 +984,7 @@ function renderPageMovements(dataset) {
 }
 
 function renderTopPages(dataset, period) {
+  const panel = dataset.topPagesPanel || {};
   const hasSplit = Boolean(dataset.topPagePeriodSplit?.available);
   const canShowPeriod = period === "total" || hasSplit;
   const topPages = canShowPeriod
@@ -967,8 +999,8 @@ function renderTopPages(dataset, period) {
   topPagesPanel.innerHTML = `
     <div class="top-pages-head">
       <div>
-        <p class="eyebrow">Top contributing pages</p>
-        <h3>Who carried the review cluster</h3>
+        <p class="eyebrow">${escapeHtml(panel.eyebrow || "Top contributing pages")}</p>
+        <h3>${escapeHtml(panel.title || "Who carried the review cluster")}</h3>
       </div>
       <div class="top-pages-controls" aria-label="Top pages period filter">
         <button class="${period === "total" ? "is-active" : ""}" type="button" data-top-period="total" aria-pressed="${period === "total"}">Total period</button>
@@ -981,10 +1013,10 @@ function renderTopPages(dataset, period) {
       ${topPages.map((page) => `
         <article>
           <div>
-            <strong>${escapeHtml(page.provider)}</strong>
-            <span>Percentage-only movement unavailable for this legacy export.</span>
+            ${page.url ? `<a href="${escapeHtml(page.url)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(page.provider)}</strong></a>` : `<strong>${escapeHtml(page.provider)}</strong>`}
+            <span>${escapeHtml(panel.itemNote || "Percentage-only movement unavailable for this legacy export.")}</span>
           </div>
-          <i style="--bar:36%"></i>
+          ${panel.showBars === false ? "" : `<i style="--bar:36%"></i>`}
         </article>
       `).join("")}
     </div>` : `
@@ -1003,8 +1035,10 @@ function renderTopPages(dataset, period) {
 }
 
 function getTopPagesNote(dataset, period) {
+  const panel = dataset.topPagesPanel || {};
+
   if (period === "total") {
-    return escapeHtml("Ranking based on the total exported period.");
+    return escapeHtml(panel.totalNote || "Ranking based on the total exported period.");
   }
 
   if (dataset.topPagePeriodSplit?.available) {
@@ -1012,7 +1046,7 @@ function getTopPagesNote(dataset, period) {
     return escapeHtml(`${periodInfo.label}: ${periodInfo.range}.`);
   }
 
-  return escapeHtml(dataset.topPagePeriodSplit?.reason || "Page-by-date export needed for this view.");
+  return escapeHtml(panel.unavailableNote || dataset.topPagePeriodSplit?.reason || "Page-by-date export needed for this view.");
 }
 
 function renderFutureData(project, dataset) {
@@ -1021,9 +1055,9 @@ function renderFutureData(project, dataset) {
   if (dataset?.urlInventory?.length) {
     performanceSlotCard.hidden = true;
     urlInventoryCard.classList.add("is-wide");
-    urlInventoryTitle.textContent = "Review URL inventory";
+    urlInventoryTitle.textContent = dataset.urlInventoryTitle || "Review URL inventory";
     urlPlaceholder.innerHTML = `
-      <span class="url-inventory-note">These are the ${dataset.urlInventory.length} review URLs included in the cluster. They have not been changed again after my update and should remain unchanged until <strong>August 8, 2026</strong>; after that, future edits are possible.</span>
+      <span class="url-inventory-note">${dataset.urlInventoryNote || `These are the ${dataset.urlInventory.length} review URLs included in the cluster. They have not been changed again after my update and should remain unchanged until <strong>August 8, 2026</strong>; after that, future edits are possible.`}</span>
       <ul class="url-inventory-list">
         ${dataset.urlInventory.map((item) => `
           <li>
@@ -1079,10 +1113,12 @@ function renderPerformanceChart(dataset) {
   }));
   const splitIndex = data.findIndex((row) => row.phase === "after");
   const splitX = xScale(splitIndex);
+  const beforePhaseLabel = dataset.periods?.before?.shortLabel || dataset.periods?.before?.label || "Before";
+  const afterPhaseLabel = dataset.periods?.after?.shortLabel || dataset.periods?.after?.label || "After";
 
   performanceChart.innerHTML = "";
   performanceChart.append(createSvgElement("title", {}));
-  performanceChart.querySelector("title").textContent = "Indexed Google Search Console percentage variation for review pages";
+  performanceChart.querySelector("title").textContent = dataset.title || "Indexed Google Search Console percentage variation";
 
   if (splitIndex > 0) {
     performanceChart.append(createSvgElement("rect", {
@@ -1105,7 +1141,7 @@ function renderPerformanceChart(dataset) {
       x: margin.left + 12,
       y: margin.top + 18
     });
-    beforeLabel.textContent = "Before";
+    beforeLabel.textContent = beforePhaseLabel;
     performanceChart.append(beforeLabel);
 
     const afterLabel = createSvgElement("text", {
@@ -1113,7 +1149,7 @@ function renderPerformanceChart(dataset) {
       x: splitX + 12,
       y: margin.top + 18
     });
-    afterLabel.textContent = "After";
+    afterLabel.textContent = afterPhaseLabel;
     performanceChart.append(afterLabel);
   }
 
@@ -1146,7 +1182,7 @@ function renderPerformanceChart(dataset) {
     y2: zeroY
   }));
 
-  [0, 14, 31, 45, data.length - 1].forEach((index) => {
+  [...new Set([0, Math.round((data.length - 1) * .25), Math.round((data.length - 1) * .5), Math.round((data.length - 1) * .75), data.length - 1])].forEach((index) => {
     if (!data[index]) return;
     const x = xScale(index);
     const dateLabel = createSvgElement("text", {
@@ -1173,20 +1209,22 @@ function renderPerformanceChart(dataset) {
     }));
   }
 
-  performanceChart.append(createSvgElement("line", {
-    class: "chart-update-line",
-    x1: splitX,
-    x2: splitX,
-    y1: margin.top,
-    y2: baseline
-  }));
-  const updateLabel = createSvgElement("text", {
-    class: "chart-update-label",
-    x: splitX + 8,
-    y: margin.top + 14
-  });
-  updateLabel.textContent = "update";
-  performanceChart.append(updateLabel);
+  if (splitIndex > 0) {
+    performanceChart.append(createSvgElement("line", {
+      class: "chart-update-line",
+      x1: splitX,
+      x2: splitX,
+      y1: margin.top,
+      y2: baseline
+    }));
+    const updateLabel = createSvgElement("text", {
+      class: "chart-update-label",
+      x: splitX + 8,
+      y: margin.top + 14
+    });
+    updateLabel.textContent = dataset.update?.chartLabel || "update";
+    performanceChart.append(updateLabel);
+  }
 
   if (showClicks) {
     clickPoints.forEach((point) => {
@@ -1291,10 +1329,10 @@ function showChartTooltip(point, dataset) {
   chartTooltip.className = "chart-tooltip";
   chartTooltip.innerHTML = `
     <strong>${formatLongDate(point.row.date)}</strong>
-    <span>${point.row.phase === "before" ? dataset.periods.before.label : dataset.periods.after.label}</span>
+    <span>${point.row.phase === "before" ? dataset.periods?.before?.label || "Before" : dataset.periods?.after?.label || "After"}</span>
     ${point.showClicks ? `<p><b class="tooltip-dot tooltip-dot--clicks"></b>${formatSignedPercent(point.row.clickChange)} click variation</p>` : ""}
     ${point.showImpressions ? `<p><b class="tooltip-dot tooltip-dot--impressions"></b>${formatSignedPercent(point.row.impressionChange)} impression variation</p>` : ""}
-    <p class="tooltip-note">Compared with the May daily baseline</p>
+    <p class="tooltip-note">${escapeHtml(dataset.chartBaseline?.tooltipNote || "Compared with the chart baseline")}</p>
   `;
 
   const anchorX = chartRect.left + (point.x / 940) * chartRect.width;

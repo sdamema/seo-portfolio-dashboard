@@ -6,7 +6,7 @@
   <title>Digital Marketing & SEO Portfolio | Emanuele Sorgonà</title>
   <meta name="description" content="Interactive portfolio for SEO, digital marketing, data workflows, HTML modules and Italian page demos.">
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=20260630-14">
+  <link rel="stylesheet" href="styles.css?v=20260630-17">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -171,7 +171,7 @@
         <div class="section-head">
           <p class="eyebrow">Selected work</p>
           <h2 id="projectsTitle">Portfolio projects</h2>
-          <p>Click a project to open a dedicated view with a clear summary, detailed accordion deep dives, future SEO data slots and the original Italian HTML demo where available.</p>
+          <p>Filter by theme. Open a case.</p>
         </div>
 
         <div class="project-filter-bar" id="projectFilters" aria-label="Filter portfolio projects by theme"></div>
@@ -236,21 +236,21 @@
           <div class="performance-card">
             <div class="performance-card-head">
               <div>
-                <p class="eyebrow">Indexed chart</p>
-                <strong>May daily average = 0%</strong>
+              <p class="eyebrow">Indexed chart</p>
+              <strong id="performanceBaselineLabel">Percentage baseline</strong>
               </div>
               <div class="performance-chart-mode" id="performanceChartMode" aria-label="Chart series filter"></div>
             </div>
             <div class="performance-legend" aria-label="Chart legend">
               <span><i class="legend-dot legend-clicks"></i>Clicks</span>
               <span><i class="legend-dot legend-impressions"></i>Impressions</span>
-              <span><i class="legend-line"></i>End-of-May update</span>
+              <span><i class="legend-line"></i><span id="performanceLegendSplit">Performance split</span></span>
             </div>
             <div class="chart-shell">
               <svg id="performanceChart" viewBox="0 0 940 360" role="img" aria-label="Google Search Console relative trend"></svg>
               <div class="chart-tooltip" id="chartTooltip" hidden></div>
             </div>
-            <p class="chart-footnote">Hover or tap the chart to inspect each date. The public view uses percentage movement only, not raw Search Console values.</p>
+            <p class="chart-footnote" id="chartFootnote">Hover or tap the chart to inspect each date. The public view uses percentage movement only, not raw Search Console values.</p>
           </div>
         </div>
 
@@ -308,6 +308,7 @@
   </main>
 
   <script src="analytics-data/processed/reviews-gsc-performance.js?v=20260630-7"></script>
-  <script src="app.js?v=20260630-14"></script>
+  <script src="analytics-data/processed/offers-gsc-performance.js?v=20260630-1"></script>
+  <script src="app.js?v=20260630-17"></script>
 </body>
 </html>

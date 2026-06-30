@@ -1,0 +1,1104 @@
+window.portfolioPerformanceData = window.portfolioPerformanceData || {};
+window.portfolioPerformanceData.offers = {
+  "id": "offers-gsc-2026-06-30-percentage-only",
+  "projectId": "offers",
+  "mode": "percentage-only-launch-index",
+  "title": "Offer pages relative Search Console launch trend",
+  "source": {
+    "platform": "Google Search Console",
+    "searchType": "Web",
+    "dateRange": "Mar 18, 2026-Jun 28, 2026",
+    "pageFilter": "New supplier offer-page URLs",
+    "note": "Public dataset is sanitized: it contains percentage changes and public URLs only, not raw clicks, impressions, CTR or average-position values."
+  },
+  "update": {
+    "label": "New-page launch baseline",
+    "chartLabel": "baseline split",
+    "legendLabel": "Launch baseline split",
+    "date": "2026-04-01",
+    "comparisonMethod": "Latest 14 active days compared with the first 14 active days. The chart uses 7-day smoothed percentage movement against the launch baseline."
+  },
+  "periods": {
+    "before": {
+      "label": "First active 14 days",
+      "shortLabel": "Launch baseline",
+      "range": "Mar 18, 2026-Mar 31, 2026"
+    },
+    "after": {
+      "label": "Following launch period",
+      "shortLabel": "Growth phase",
+      "range": "Apr 1, 2026-Jun 28, 2026"
+    }
+  },
+  "chartBaseline": {
+    "label": "First active 14 days = 0% baseline",
+    "method": "Each chart point is a 7-day smoothed percentage variation from the first active 14-day average.",
+    "tooltipNote": "Compared with the first active 14-day baseline"
+  },
+  "narrative": {
+    "summary": "These are <strong>new supplier offer pages</strong>, so the chart is not a classic before/after update. It shows a <strong>percentage-only launch trend</strong>: smoothed clicks and impressions are indexed against the first active phase, while raw GSC values stay hidden.",
+    "insights": [
+      "The latest phase is compared with the launch baseline to show whether the new pages gained visibility after publication.",
+      "URL names are shown only as public inventory/top contributors; performance values are intentionally excluded."
+    ]
+  },
+  "deltas": {
+    "clickTrend": {
+      "direction": "declined",
+      "percent": -0.1255
+    },
+    "impressionTrend": {
+      "direction": "improved",
+      "percent": 0.1997
+    },
+    "ctrTrend": {
+      "direction": "declined",
+      "percent": -0.3461
+    },
+    "positionTrend": {
+      "direction": "declined",
+      "percent": -0.4801
+    }
+  },
+  "metricCards": [
+    {
+      "label": "Click trend",
+      "value": -0.1255,
+      "direction": "declined",
+      "description": "latest 14-day average vs launch baseline"
+    },
+    {
+      "label": "Impression trend",
+      "value": 0.1997,
+      "direction": "improved",
+      "description": "latest 14-day visibility vs launch baseline"
+    },
+    {
+      "label": "CTR trend",
+      "value": -0.3461,
+      "direction": "declined",
+      "description": "relative click-efficiency movement"
+    },
+    {
+      "label": "Position trend",
+      "value": -0.4801,
+      "direction": "declined",
+      "description": "relative movement, lower position is better"
+    }
+  ],
+  "chart": [
+    {
+      "date": "2026-03-18",
+      "phase": "before",
+      "clickChange": -0.8828,
+      "impressionChange": -0.9528
+    },
+    {
+      "date": "2026-03-19",
+      "phase": "before",
+      "clickChange": -0.5314,
+      "impressionChange": -0.6387
+    },
+    {
+      "date": "2026-03-20",
+      "phase": "before",
+      "clickChange": -0.0823,
+      "impressionChange": -0.4768
+    },
+    {
+      "date": "2026-03-21",
+      "phase": "before",
+      "clickChange": -0.1213,
+      "impressionChange": -0.4378
+    },
+    {
+      "date": "2026-03-22",
+      "phase": "before",
+      "clickChange": -0.2033,
+      "impressionChange": -0.4194
+    },
+    {
+      "date": "2026-03-23",
+      "phase": "before",
+      "clickChange": -0.1994,
+      "impressionChange": -0.3475
+    },
+    {
+      "date": "2026-03-24",
+      "phase": "before",
+      "clickChange": -0.1464,
+      "impressionChange": -0.2818
+    },
+    {
+      "date": "2026-03-25",
+      "phase": "before",
+      "clickChange": 0.0544,
+      "impressionChange": -0.0274
+    },
+    {
+      "date": "2026-03-26",
+      "phase": "before",
+      "clickChange": 0.1548,
+      "impressionChange": 0.068
+    },
+    {
+      "date": "2026-03-27",
+      "phase": "before",
+      "clickChange": 0.113,
+      "impressionChange": 0.173
+    },
+    {
+      "date": "2026-03-28",
+      "phase": "before",
+      "clickChange": 0.0962,
+      "impressionChange": 0.214
+    },
+    {
+      "date": "2026-03-29",
+      "phase": "before",
+      "clickChange": 0.1464,
+      "impressionChange": 0.217
+    },
+    {
+      "date": "2026-03-30",
+      "phase": "before",
+      "clickChange": 0.2301,
+      "impressionChange": 0.2561
+    },
+    {
+      "date": "2026-03-31",
+      "phase": "before",
+      "clickChange": 0.1464,
+      "impressionChange": 0.2818
+    },
+    {
+      "date": "2026-04-01",
+      "phase": "after",
+      "clickChange": 0.046,
+      "impressionChange": 0.1635
+    },
+    {
+      "date": "2026-04-02",
+      "phase": "after",
+      "clickChange": -0.0628,
+      "impressionChange": 0.1043
+    },
+    {
+      "date": "2026-04-03",
+      "phase": "after",
+      "clickChange": -0.2552,
+      "impressionChange": -0.0127
+    },
+    {
+      "date": "2026-04-04",
+      "phase": "after",
+      "clickChange": -0.3305,
+      "impressionChange": -0.0932
+    },
+    {
+      "date": "2026-04-05",
+      "phase": "after",
+      "clickChange": -0.4477,
+      "impressionChange": -0.1465
+    },
+    {
+      "date": "2026-04-06",
+      "phase": "after",
+      "clickChange": -0.5983,
+      "impressionChange": -0.2816
+    },
+    {
+      "date": "2026-04-07",
+      "phase": "after",
+      "clickChange": -0.6067,
+      "impressionChange": -0.3701
+    },
+    {
+      "date": "2026-04-08",
+      "phase": "after",
+      "clickChange": -0.6987,
+      "impressionChange": -0.425
+    },
+    {
+      "date": "2026-04-09",
+      "phase": "after",
+      "clickChange": -0.749,
+      "impressionChange": -0.4759
+    },
+    {
+      "date": "2026-04-10",
+      "phase": "after",
+      "clickChange": -0.749,
+      "impressionChange": -0.5011
+    },
+    {
+      "date": "2026-04-11",
+      "phase": "after",
+      "clickChange": -0.7406,
+      "impressionChange": -0.5133
+    },
+    {
+      "date": "2026-04-12",
+      "phase": "after",
+      "clickChange": -0.6987,
+      "impressionChange": -0.5114
+    },
+    {
+      "date": "2026-04-13",
+      "phase": "after",
+      "clickChange": -0.6904,
+      "impressionChange": -0.4452
+    },
+    {
+      "date": "2026-04-14",
+      "phase": "after",
+      "clickChange": -0.7071,
+      "impressionChange": -0.4307
+    },
+    {
+      "date": "2026-04-15",
+      "phase": "after",
+      "clickChange": -0.6736,
+      "impressionChange": -0.4162
+    },
+    {
+      "date": "2026-04-16",
+      "phase": "after",
+      "clickChange": -0.7071,
+      "impressionChange": -0.372
+    },
+    {
+      "date": "2026-04-17",
+      "phase": "after",
+      "clickChange": -0.6904,
+      "impressionChange": -0.338
+    },
+    {
+      "date": "2026-04-18",
+      "phase": "after",
+      "clickChange": -0.6987,
+      "impressionChange": -0.3143
+    },
+    {
+      "date": "2026-04-19",
+      "phase": "after",
+      "clickChange": -0.7071,
+      "impressionChange": -0.2966
+    },
+    {
+      "date": "2026-04-20",
+      "phase": "after",
+      "clickChange": -0.7238,
+      "impressionChange": -0.3032
+    },
+    {
+      "date": "2026-04-21",
+      "phase": "after",
+      "clickChange": -0.682,
+      "impressionChange": -0.3034
+    },
+    {
+      "date": "2026-04-22",
+      "phase": "after",
+      "clickChange": -0.682,
+      "impressionChange": -0.3111
+    },
+    {
+      "date": "2026-04-23",
+      "phase": "after",
+      "clickChange": -0.6736,
+      "impressionChange": -0.3376
+    },
+    {
+      "date": "2026-04-24",
+      "phase": "after",
+      "clickChange": -0.7155,
+      "impressionChange": -0.3452
+    },
+    {
+      "date": "2026-04-25",
+      "phase": "after",
+      "clickChange": -0.6987,
+      "impressionChange": -0.3447
+    },
+    {
+      "date": "2026-04-26",
+      "phase": "after",
+      "clickChange": -0.7155,
+      "impressionChange": -0.3408
+    },
+    {
+      "date": "2026-04-27",
+      "phase": "after",
+      "clickChange": -0.6653,
+      "impressionChange": -0.325
+    },
+    {
+      "date": "2026-04-28",
+      "phase": "after",
+      "clickChange": -0.6987,
+      "impressionChange": -0.3079
+    },
+    {
+      "date": "2026-04-29",
+      "phase": "after",
+      "clickChange": -0.682,
+      "impressionChange": -0.2636
+    },
+    {
+      "date": "2026-04-30",
+      "phase": "after",
+      "clickChange": -0.6653,
+      "impressionChange": -0.2508
+    },
+    {
+      "date": "2026-05-01",
+      "phase": "after",
+      "clickChange": -0.6318,
+      "impressionChange": -0.2632
+    },
+    {
+      "date": "2026-05-02",
+      "phase": "after",
+      "clickChange": -0.5983,
+      "impressionChange": -0.2683
+    },
+    {
+      "date": "2026-05-03",
+      "phase": "after",
+      "clickChange": -0.5649,
+      "impressionChange": -0.2708
+    },
+    {
+      "date": "2026-05-04",
+      "phase": "after",
+      "clickChange": -0.6067,
+      "impressionChange": -0.2637
+    },
+    {
+      "date": "2026-05-05",
+      "phase": "after",
+      "clickChange": -0.5481,
+      "impressionChange": -0.1856
+    },
+    {
+      "date": "2026-05-06",
+      "phase": "after",
+      "clickChange": -0.4644,
+      "impressionChange": -0.1687
+    },
+    {
+      "date": "2026-05-07",
+      "phase": "after",
+      "clickChange": -0.3724,
+      "impressionChange": -0.0951
+    },
+    {
+      "date": "2026-05-08",
+      "phase": "after",
+      "clickChange": -0.3305,
+      "impressionChange": -0.0208
+    },
+    {
+      "date": "2026-05-09",
+      "phase": "after",
+      "clickChange": -0.3473,
+      "impressionChange": 0.0017
+    },
+    {
+      "date": "2026-05-10",
+      "phase": "after",
+      "clickChange": -0.364,
+      "impressionChange": 0.0275
+    },
+    {
+      "date": "2026-05-11",
+      "phase": "after",
+      "clickChange": -0.3305,
+      "impressionChange": 0.0704
+    },
+    {
+      "date": "2026-05-12",
+      "phase": "after",
+      "clickChange": -0.3556,
+      "impressionChange": 0.0322
+    },
+    {
+      "date": "2026-05-13",
+      "phase": "after",
+      "clickChange": -0.3556,
+      "impressionChange": 0.0354
+    },
+    {
+      "date": "2026-05-14",
+      "phase": "after",
+      "clickChange": -0.4142,
+      "impressionChange": 0.0044
+    },
+    {
+      "date": "2026-05-15",
+      "phase": "after",
+      "clickChange": -0.3975,
+      "impressionChange": -0.0153
+    },
+    {
+      "date": "2026-05-16",
+      "phase": "after",
+      "clickChange": -0.3808,
+      "impressionChange": -0.0111
+    },
+    {
+      "date": "2026-05-17",
+      "phase": "after",
+      "clickChange": -0.3975,
+      "impressionChange": -0.0258
+    },
+    {
+      "date": "2026-05-18",
+      "phase": "after",
+      "clickChange": -0.4142,
+      "impressionChange": -0.0638
+    },
+    {
+      "date": "2026-05-19",
+      "phase": "after",
+      "clickChange": -0.4142,
+      "impressionChange": -0.1223
+    },
+    {
+      "date": "2026-05-20",
+      "phase": "after",
+      "clickChange": -0.4979,
+      "impressionChange": -0.1488
+    },
+    {
+      "date": "2026-05-21",
+      "phase": "after",
+      "clickChange": -0.4895,
+      "impressionChange": -0.1726
+    },
+    {
+      "date": "2026-05-22",
+      "phase": "after",
+      "clickChange": -0.4895,
+      "impressionChange": -0.1918
+    },
+    {
+      "date": "2026-05-23",
+      "phase": "after",
+      "clickChange": -0.5146,
+      "impressionChange": -0.2053
+    },
+    {
+      "date": "2026-05-24",
+      "phase": "after",
+      "clickChange": -0.4979,
+      "impressionChange": -0.2153
+    },
+    {
+      "date": "2026-05-25",
+      "phase": "after",
+      "clickChange": -0.4393,
+      "impressionChange": -0.2187
+    },
+    {
+      "date": "2026-05-26",
+      "phase": "after",
+      "clickChange": -0.4644,
+      "impressionChange": -0.1883
+    },
+    {
+      "date": "2026-05-27",
+      "phase": "after",
+      "clickChange": -0.4477,
+      "impressionChange": -0.1624
+    },
+    {
+      "date": "2026-05-28",
+      "phase": "after",
+      "clickChange": -0.4812,
+      "impressionChange": -0.153
+    },
+    {
+      "date": "2026-05-29",
+      "phase": "after",
+      "clickChange": -0.4895,
+      "impressionChange": -0.1576
+    },
+    {
+      "date": "2026-05-30",
+      "phase": "after",
+      "clickChange": -0.4561,
+      "impressionChange": -0.1462
+    },
+    {
+      "date": "2026-05-31",
+      "phase": "after",
+      "clickChange": -0.4059,
+      "impressionChange": -0.1183
+    },
+    {
+      "date": "2026-06-01",
+      "phase": "after",
+      "clickChange": -0.5146,
+      "impressionChange": -0.1261
+    },
+    {
+      "date": "2026-06-02",
+      "phase": "after",
+      "clickChange": -0.5146,
+      "impressionChange": -0.168
+    },
+    {
+      "date": "2026-06-03",
+      "phase": "after",
+      "clickChange": -0.3975,
+      "impressionChange": -0.171
+    },
+    {
+      "date": "2026-06-04",
+      "phase": "after",
+      "clickChange": -0.3808,
+      "impressionChange": -0.155
+    },
+    {
+      "date": "2026-06-05",
+      "phase": "after",
+      "clickChange": -0.3724,
+      "impressionChange": -0.131
+    },
+    {
+      "date": "2026-06-06",
+      "phase": "after",
+      "clickChange": -0.3473,
+      "impressionChange": -0.1207
+    },
+    {
+      "date": "2026-06-07",
+      "phase": "after",
+      "clickChange": -0.3975,
+      "impressionChange": -0.1287
+    },
+    {
+      "date": "2026-06-08",
+      "phase": "after",
+      "clickChange": -0.2385,
+      "impressionChange": -0.0307
+    },
+    {
+      "date": "2026-06-09",
+      "phase": "after",
+      "clickChange": -0.205,
+      "impressionChange": 0.0633
+    },
+    {
+      "date": "2026-06-10",
+      "phase": "after",
+      "clickChange": -0.1799,
+      "impressionChange": 0.1182
+    },
+    {
+      "date": "2026-06-11",
+      "phase": "after",
+      "clickChange": -0.1381,
+      "impressionChange": 0.1667
+    },
+    {
+      "date": "2026-06-12",
+      "phase": "after",
+      "clickChange": -0.1297,
+      "impressionChange": 0.1896
+    },
+    {
+      "date": "2026-06-13",
+      "phase": "after",
+      "clickChange": -0.1548,
+      "impressionChange": 0.197
+    },
+    {
+      "date": "2026-06-14",
+      "phase": "after",
+      "clickChange": -0.0795,
+      "impressionChange": 0.2012
+    },
+    {
+      "date": "2026-06-15",
+      "phase": "after",
+      "clickChange": -0.1632,
+      "impressionChange": 0.1684
+    },
+    {
+      "date": "2026-06-16",
+      "phase": "after",
+      "clickChange": -0.1046,
+      "impressionChange": 0.2117
+    },
+    {
+      "date": "2026-06-17",
+      "phase": "after",
+      "clickChange": -0.2218,
+      "impressionChange": 0.1857
+    },
+    {
+      "date": "2026-06-18",
+      "phase": "after",
+      "clickChange": -0.2218,
+      "impressionChange": 0.1754
+    },
+    {
+      "date": "2026-06-19",
+      "phase": "after",
+      "clickChange": -0.1464,
+      "impressionChange": 0.1698
+    },
+    {
+      "date": "2026-06-20",
+      "phase": "after",
+      "clickChange": -0.1046,
+      "impressionChange": 0.1875
+    },
+    {
+      "date": "2026-06-21",
+      "phase": "after",
+      "clickChange": -0.1297,
+      "impressionChange": 0.2038
+    },
+    {
+      "date": "2026-06-22",
+      "phase": "after",
+      "clickChange": -0.1381,
+      "impressionChange": 0.2102
+    },
+    {
+      "date": "2026-06-23",
+      "phase": "after",
+      "clickChange": -0.1883,
+      "impressionChange": 0.1638
+    },
+    {
+      "date": "2026-06-24",
+      "phase": "after",
+      "clickChange": -0.1046,
+      "impressionChange": 0.1668
+    },
+    {
+      "date": "2026-06-25",
+      "phase": "after",
+      "clickChange": -0.0544,
+      "impressionChange": 0.1705
+    },
+    {
+      "date": "2026-06-26",
+      "phase": "after",
+      "clickChange": -0.113,
+      "impressionChange": 0.1915
+    },
+    {
+      "date": "2026-06-27",
+      "phase": "after",
+      "clickChange": -0.1046,
+      "impressionChange": 0.1894
+    },
+    {
+      "date": "2026-06-28",
+      "phase": "after",
+      "clickChange": -0.1213,
+      "impressionChange": 0.1957
+    }
+  ],
+  "topPages": [
+    {
+      "provider": "Eni Plenitude - Fixa Time Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-luce-gas/"
+    },
+    {
+      "provider": "Enel - Fix Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/fix-luce-gas/"
+    },
+    {
+      "provider": "Enel - Move Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/move-luce/"
+    },
+    {
+      "provider": "Eni Plenitude - Fixa Time Gas Smart",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-gas-smart/"
+    },
+    {
+      "provider": "Enel - Flex Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-luce/"
+    },
+    {
+      "provider": "Eni Plenitude - Fixa Time Smart",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-smart/"
+    }
+  ],
+  "topPagesPanel": {
+    "eyebrow": "Top contributing offer pages",
+    "title": "Which URLs led the launch",
+    "totalNote": "URL names only, ordered by total exported contribution. Raw clicks, impressions, CTR and position are not included in the public file.",
+    "unavailableNote": "This export is total-period only. A page-by-date export is needed to compare URL-level phases without exposing raw values.",
+    "itemNote": "Values hidden in the public version.",
+    "showBars": false
+  },
+  "topPagePeriodSplit": {
+    "available": false,
+    "reason": "Page-by-date export needed for phase-level URL ranking. This public view keeps only total-period URL names."
+  },
+  "urlInventoryTitle": "Offer URL inventory",
+  "urlInventoryNote": "Public URLs included in the GSC offer-page export. Performance numbers are intentionally excluded; the chart above shows only indexed percentage movement.",
+  "urlInventory": [
+    {
+      "provider": "Eni Plenitude - Fixa Time Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-luce-gas/"
+    },
+    {
+      "provider": "Enel - Fix Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/fix-luce-gas/"
+    },
+    {
+      "provider": "Enel - Move Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/move-luce/"
+    },
+    {
+      "provider": "Eni Plenitude - Fixa Time Gas Smart",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-gas-smart/"
+    },
+    {
+      "provider": "Enel - Flex Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-luce/"
+    },
+    {
+      "provider": "Eni Plenitude - Fixa Time Smart",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/fixa-time-smart/"
+    },
+    {
+      "provider": "Enel - Fix Web Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/fix-web-luce-gas/"
+    },
+    {
+      "provider": "Iren - Web Self Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/web-self-luce/"
+    },
+    {
+      "provider": "Iren - No Stress Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/no-stress-luce/"
+    },
+    {
+      "provider": "Enel - Flex Box",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-box/"
+    },
+    {
+      "provider": "Enel - Flex Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-gas/"
+    },
+    {
+      "provider": "A2A - Start Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/start-luce/"
+    },
+    {
+      "provider": "Edison - Web Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/web-luce/"
+    },
+    {
+      "provider": "Iren - Revolution Salute Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/revolution-salute-luce/"
+    },
+    {
+      "provider": "Engie - Puntofisso 12m",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/engie/offerte/puntofisso-12m/"
+    },
+    {
+      "provider": "Eni Plenitude - Trend Casa",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/trend-casa/"
+    },
+    {
+      "provider": "Enel - Move Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/move-gas/"
+    },
+    {
+      "provider": "Engie - Vedochiaro",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/engie/offerte/vedochiaro/"
+    },
+    {
+      "provider": "Alperia - Direct Energy",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/alperia/tariffe/direct-energy/"
+    },
+    {
+      "provider": "Magis Energia - Mia Luce Gas Fix Web",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/magis-energia/mia-luce-gas-fix-web/"
+    },
+    {
+      "provider": "Iren - Web Self Gas Prezzo Fisso",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/web-self-gas-prezzo-fisso/"
+    },
+    {
+      "provider": "Iren - Revolution Spese Protette Gas Prezzo Fisso",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/revolution-spese-protette-gas-prezzo-fisso/"
+    },
+    {
+      "provider": "Edison - Dynamic Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/dynamic-luce-gas/"
+    },
+    {
+      "provider": "Edison - Dynamic Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/dynamic-luce/"
+    },
+    {
+      "provider": "Octopus Energy - Octopus Flex",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/octopus-energy/octopus-flex/"
+    },
+    {
+      "provider": "Iren - 10x3 Gas Variabile",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/10x3-gas-variabile/"
+    },
+    {
+      "provider": "Octopus Energy - Fissa 12m",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/octopus-energy/fissa-12m/"
+    },
+    {
+      "provider": "Acea - Energia Fix",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/acea/offerte/energia-fix/"
+    },
+    {
+      "provider": "A2A - Click",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/click/"
+    },
+    {
+      "provider": "Edison - World Plus",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/world-plus/"
+    },
+    {
+      "provider": "A2A - Start Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/start-gas/"
+    },
+    {
+      "provider": "E.ON - Flex Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eon/offerte/flex-luce/"
+    },
+    {
+      "provider": "A2A - Smart Casa Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/smart-casa-luce/"
+    },
+    {
+      "provider": "Iren - 10x3 Luce Variabile",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/iren/offerte/10x3-luce-variabile/"
+    },
+    {
+      "provider": "Estra - Facile Fix Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/estra/facile-fix-luce-gas/"
+    },
+    {
+      "provider": "Eni Plenitude - Flexi Pertinenze",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eni-plenitude/offerte/flexi-pertinenze/"
+    },
+    {
+      "provider": "Sorgenia - Next Energy Smart Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/sorgenia/offerte/next-energy-smart-luce/"
+    },
+    {
+      "provider": "Edison - Easyfix Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/easyfix-luce/"
+    },
+    {
+      "provider": "A2A - Full",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/full/"
+    },
+    {
+      "provider": "Dolomiti Energia - Flex 24 Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/dolomiti-energia/flex-24-luce/"
+    },
+    {
+      "provider": "Enel - Seconda Casa Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/seconda-casa-luce/"
+    },
+    {
+      "provider": "Illumia - Luce Flex",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/illumia/luce-flex/"
+    },
+    {
+      "provider": "Magis Energia - Mia Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/magis-energia/mia-luce-gas/"
+    },
+    {
+      "provider": "E.ON - Luceclick Verde",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eon/offerte/luceclick-verde/"
+    },
+    {
+      "provider": "Sorgenia - Next Energy Sunlight",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/sorgenia/offerte/next-energy-sunlight/"
+    },
+    {
+      "provider": "A2A - Smart Casa Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/smart-casa-gas/"
+    },
+    {
+      "provider": "Enel - Flex Control Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-control-luce/"
+    },
+    {
+      "provider": "Illumia - Energia Lunga Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/illumia/energia-lunga-luce/"
+    },
+    {
+      "provider": "Edison - Superflex Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/superflex-luce/"
+    },
+    {
+      "provider": "Enel - Fix Wow",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/fix-wow/"
+    },
+    {
+      "provider": "A2A - Smart Casa Plus",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/smart-casa-plus/"
+    },
+    {
+      "provider": "Enel - Flash",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flash/"
+    },
+    {
+      "provider": "Edison - World",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/world/"
+    },
+    {
+      "provider": "Illumia - Gas Flex",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/illumia/gas-flex/"
+    },
+    {
+      "provider": "A2A - Smart Casa",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/smart-casa/"
+    },
+    {
+      "provider": "A2A - Easy Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/easy-luce/"
+    },
+    {
+      "provider": "E.ON - Luce Drive Smarty",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eon/offerte/luce-drive-smarty/"
+    },
+    {
+      "provider": "A2A - Easy Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/a2a/offerte/easy-gas/"
+    },
+    {
+      "provider": "NeN - Dieci Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/nen/dieci-luce/"
+    },
+    {
+      "provider": "Acea - Sprint Web",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/acea/offerte/sprint-web/"
+    },
+    {
+      "provider": "Enel - Flex Business Luce",
+      "url": "https://www.papernest.it/luce-gas/business/enel/flex-business-luce/"
+    },
+    {
+      "provider": "Edison - Dynamic Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/dynamic-gas/"
+    },
+    {
+      "provider": "Alperia - Gas Home Promo",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/alperia/tariffe/gas-home-promo/"
+    },
+    {
+      "provider": "Hera - Piucontrollo Flat Easy Casa",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/hera/offerte/piucontrollo-flat-easy-casa/"
+    },
+    {
+      "provider": "E.ON - Luce Chiara Click",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eon/offerte/luce-chiara-click/"
+    },
+    {
+      "provider": "Alperia - Home Digital",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/alperia/tariffe/home-digital/"
+    },
+    {
+      "provider": "Pulsee - Luce Relax Fix",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/pulsee/luce-relax-fix/"
+    },
+    {
+      "provider": "Pulsee - Gas Relax",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/pulsee/gas-relax/"
+    },
+    {
+      "provider": "Dolomiti Energia - Flex 24 Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/dolomiti-energia/flex-24-gas/"
+    },
+    {
+      "provider": "Enel - Flex Control Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/enel/offerte/flex-control-gas/"
+    },
+    {
+      "provider": "E.ON - Flex Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/eon/offerte/flex-gas/"
+    },
+    {
+      "provider": "Edison - Superflex Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/superflex-gas/"
+    },
+    {
+      "provider": "Estra - Facile Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/estra/facile-luce-gas/"
+    },
+    {
+      "provider": "NeN - Surf Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/nen/surf-luce-gas/"
+    },
+    {
+      "provider": "Poste Energia - Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/poste-energia/offerte/luce-gas/"
+    },
+    {
+      "provider": "Edison - Web Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/web-gas/"
+    },
+    {
+      "provider": "Enel - Flex Business Gas",
+      "url": "https://www.papernest.it/luce-gas/business/enel/flex-business-gas/"
+    },
+    {
+      "provider": "Hera - Piucontrollo Special Active",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/hera/offerte/piucontrollo-special-active/"
+    },
+    {
+      "provider": "Illumia - Energia Lunga Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/illumia/energia-lunga-gas/"
+    },
+    {
+      "provider": "Dolomiti Energia - Sinergika Luce",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/dolomiti-energia/sinergika-luce/"
+    },
+    {
+      "provider": "Engie - Benvenuto In Engie",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/engie/offerte/benvenuto-in-engie/"
+    },
+    {
+      "provider": "NeN - Due Luce Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/nen/due-luce-gas/"
+    },
+    {
+      "provider": "Dolomiti Energia - Sinergika Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/dolomiti-energia/sinergika-gas/"
+    },
+    {
+      "provider": "Edison - Easyfix Gas",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/edison/offerte/easyfix-gas/"
+    },
+    {
+      "provider": "Pulsee - Luce Limite",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/pulsee/luce-limite/"
+    },
+    {
+      "provider": "Alperia - Gas Smile Start",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/alperia/tariffe/gas-smile-start/"
+    },
+    {
+      "provider": "Alperia - Home Plus",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/alperia/tariffe/home-plus/"
+    },
+    {
+      "provider": "Pulsee - Luce Gas Per Te",
+      "url": "https://www.papernest.it/luce-gas/fornitori-energia-elettrica/pulsee/luce-gas-per-te/"
+    }
+  ],
+  "privacyNote": "Generated from local raw GSC export; public file contains only percentages and URLs."
+};
