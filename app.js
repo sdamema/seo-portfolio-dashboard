@@ -26,7 +26,7 @@ const projects = [
       },
       {
         title: "How we worked: scraping, cleaning and clustering",
-        body: `<p>The workflow started with <strong>AI-assisted scraping and research</strong>. Public comments were collected from social/community sources using tools such as Apify, Claude Code-assisted workflows and Codex-generated instructions for what to collect, what to exclude and how to keep the data useful.</p><div class="process-flow"><article><span>Collect</span><p>Prioritize direct customer experiences about price, bills, customer support, app, activation, cancellation, transparency and switching supplier.</p></article><article><span>Clean</span><p>Remove spam, referral codes, vague mentions, duplicated comments, unsupported claims and content that could not be connected to a real user experience.</p></article><article><span>Normalize</span><p>Preserve text, platform, visible author or handle, source URL, date/context and quality notes so the dataset stays auditable.</p></article><article><span>Cluster</span><p>Group comments by user concern, such as tariffs and savings, support, app/billing, activation, provider change and reputation.</p></article></div><p>This made the data usable for SEO content because the page could reflect <strong>real search intent</strong> instead of forcing all comments into one generic paragraph.</p>`
+        body: `<p>The workflow started with <strong>AI-assisted scraping and research</strong>. Public comments were collected through <strong>Apify scraping runs operated from Claude Code via the Apify integration</strong>, with Codex-generated instructions defining what to collect, what to exclude and how to keep the data useful.</p><div class="process-flow"><article><span>Collect</span><p>Prioritize direct customer experiences about price, bills, customer support, app, activation, cancellation, transparency and switching supplier.</p></article><article><span>Clean</span><p>Remove spam, referral codes, vague mentions, duplicated comments, unsupported claims and content that could not be connected to a real user experience.</p></article><article><span>Normalize</span><p>Preserve text, platform, visible author or handle, source URL, date/context and quality notes so the dataset stays auditable.</p></article><article><span>Cluster</span><p>Group comments by user concern, such as tariffs and savings, support, app/billing, activation, provider change and reputation.</p></article></div><p>This made the data usable for SEO content because the page could reflect <strong>real search intent</strong> instead of forcing all comments into one generic paragraph.</p>`
       },
       {
         title: "How the scoring and analysis worked",
@@ -49,43 +49,40 @@ const projects = [
   },
   {
     id: "scraping",
-    title: "Social Comments Pipeline",
-    shortTitle: "Scraping",
-    category: "Data collection + QA",
+    title: "Social Comments Scraping Pipeline",
+    shortTitle: "Social Scraping",
+    category: "Social scraping + QA",
     status: "Auditable workflow",
-    summary: "An auditable workflow for collecting, cleaning and exporting <strong>public social comments</strong> before they become review-page evidence.",
-    explanation: `<p>This project is the data layer behind the review pages. The workspace does not generate the final HTML page; it prepares <strong>clean, traceable and review-ready inputs</strong> from public sources such as Reddit, YouTube, Facebook, X, forums and other verifiable pages.</p><p>The goal was not to collect as many comments as possible. It was to build a <strong>controlled evidence pipeline</strong>: exact comment text, author/anonymous label, platform, source URL, date/context and QA notes, all normalized before moving into clustering, sentiment analysis and scoring.</p>`,
+    summary: "A scraping workflow for collecting <strong>higher-quality public social comments</strong>: <strong>Apify handled the scraping</strong>, the runs were managed inside <strong>Claude Code through the Apify integration</strong>, and Codex helped structure the collection instructions before the data entered the review-page pipeline. The quality criteria produced <strong>543 usable comments across 12 suppliers</strong> and an estimated <strong>4.5 hours saved</strong> in manual reading and evaluation.",
+    explanation: `<p>This project is the data layer behind the review pages. It prepares <strong>clean, traceable and review-ready inputs</strong> from public sources such as Reddit, YouTube, Facebook, X, forums and other verifiable pages.</p><p>The goal was not to scrape as many comments as possible. In practice, <strong>Apify was the scraping tool</strong>, while <strong>Claude Code was the operating environment</strong> thanks to the Apify integration. Codex was used to define <strong>scraping instructions, exclusion rules and topic priorities</strong> so the collection phase already focused on useful evidence: tariffs, assistance, bills, app experience, activation, switching supplier and transparency.</p>`,
     summaryPoints: [
-      `<span>Rules</span><strong>Defined what to collect and exclude</strong><em>Spam, referral codes, vague mentions and off-topic posts were filtered before analysis.</em>`,
-      `<span>QA</span><strong>Used Codex-assisted pre-cleaning logic</strong><em>The workflow preserved source context while removing weak or duplicated comments.</em>`,
-      `<span>Output</span><strong>Prepared exports for scoring and clusters</strong><em>Clean rows moved into sentiment, topic clustering and review-page generation.</em>`
+      `<span>Rules</span><strong>Defined what to collect and exclude</strong><em>Spam, referral codes, weak mentions, brand replies and off-topic posts were filtered before analysis.</em>`,
+      `<span>Targeting</span><strong>Prioritized useful review themes</strong><em>Queries and instructions pushed the scraper toward assistance, bills, tariffs, app, activation and switching experiences.</em>`,
+      `<span>Output</span><strong>Saved review time after scraping</strong><em>Central estimate: about 815 generic comments avoided, equal to roughly 4.5 hours of manual reading and evaluation saved.</em>`
     ],
     summaryPointStyle: "rich",
-    metrics: [
-      ["7,394", "raw comments in an early pipeline summary"],
-      ["797", "comments kept after filters"],
-      ["11", "raw provider datasets"],
-      ["1", "canonical export schema"]
-    ],
-    callouts: [
-      ["Sources", "Reddit, YouTube, Facebook, Instagram and X were considered with <strong>quality filters</strong>."],
-      ["QA", "Spam, weak comments and unsupported claims were removed before analysis."],
-      ["Use", "Clean exports fed <strong>cluster, sentiment and scoring</strong> workflows."]
-    ],
+    metrics: [],
+    callouts: [],
     deepDive: [
       {
         title: "Why the pipeline was needed",
-        body: `<p>The review system depends on the quality of the comments. Raw social data is messy: it can include <strong>duplicates, referral spam, jokes, off-topic mentions, missing dates, low-context complaints</strong> and comments that mention a provider without describing an actual experience.</p><p>If those comments entered the page directly, the final content would be weaker and less trustworthy. The pipeline was created to separate <strong>collection</strong> from <strong>selection</strong>: first preserve raw exports, then decide what is editorially useful for the review workflow.</p><p>This also made the SEO work safer. A page based on public comments needs a source trail: the value is not simply "having opinions", but being able to show that the opinions are <strong>traceable, relevant, non-promotional and usable</strong>.</p>`
+        body: `<p>The review system depends on the quality of the comments. Raw social data is messy: it can include <strong>duplicates, referral spam, jokes, off-topic mentions, missing dates, low-context complaints</strong> and comments that mention a provider without describing an actual experience.</p><p>If those comments entered the page directly, the final content would be weaker and less trustworthy. The pipeline was created to make scraping more selective from the beginning: not "collect everything and clean later", but <strong>define what counts as useful evidence before the run starts</strong>.</p><p>This also made the SEO work safer. A page based on public comments needs a source trail: the value is not simply having opinions, but being able to show that the opinions are <strong>traceable, relevant, non-promotional and usable</strong>.</p>`
       },
       {
-        title: "How we worked: source rules and pre-cleaning",
-        body: `<p>Codex was used to help turn editorial rules into operational instructions: which comments to collect, which to ignore, why a comment is useful and how to document the source. The collection logic prioritized comments about <strong>prices, bills, support, app experience, activation, cancellation, switching supplier and transparency</strong>.</p><div class="process-flow"><article><span>Targets</span><p>Prepare provider/platform targets and query packs, with Reddit communities such as <strong>r/bollette</strong> and <strong>r/ItaliaPersonalFinance</strong> as priority sources when relevant.</p></article><article><span>Rules</span><p>Keep direct experiences with concrete detail; reject spam, referral codes, promotional comments, weak mentions, off-topic threads and comments without a recoverable source.</p></article><article><span>Schema</span><p>Normalize into a canonical dataset: <strong>local_id, supplier, comment, author, platform, source, source URL, date, scraped_at and notes</strong>.</p></article><article><span>QA</span><p>Run validation before export: source URL present, exact text preserved, duplicates checked, platform normalized and author set or anonymized.</p></article></div><p>The workflow also set practical safeguards: keep the full comment text, avoid rewriting or translating it, limit repeated comments from the same author and preserve raw exports before producing the final review-ready file.</p>`
+        title: "How the scraping instructions were built",
+        body: `<p>The most important work was translating editorial judgment into <strong>operational scraping rules</strong>. The scraping itself was done with <strong>Apify Actors</strong>, but the workflow ran inside <strong>Claude Code through the Apify integration</strong>: Claude Code could call the Apify layer, run the selected Actors, read returned datasets and continue the processing workflow from there. <strong>Codex</strong> was used to structure the instructions that told the scraper what to search for, what to exclude, which themes mattered and how to preserve the source trail.</p><p>This mattered because social scraping can become expensive and noisy if the tool collects every weak mention. The instructions helped the workflow focus on comments that were already likely to be useful: <strong>direct customer experience, concrete details, recoverable URL, visible author or anonymous label, platform and date/context</strong>.</p><div class="process-flow"><article><span>Apify</span><p>Execute the actual scraping through Actors and collect public comments from the selected social/community sources.</p></article><article><span>Claude Code</span><p>Operate the Apify integration: launch runs, inspect returned datasets and keep the scraping workflow connected to the next processing steps.</p></article><article><span>Codex</span><p>Turn editorial criteria into scraping instructions, exclusion rules, query packs and topic priorities before collection.</p></article><article><span>QA</span><p>Validate source URL, exact text, platform, author/anonymous label, date/context and usefulness before export.</p></article></div><p>In practice, the instructions worked like a <strong>pre-cleaning layer</strong>: they reduced comments that would have been thrown away later and increased the chance that each scraped row could actually support clustering, sentiment analysis or scoring.</p>`
       },
       {
-        title: "How it connected to analysis",
-        body: `<p>After collection and validation, comments were exported into the historical format used by the review project: <strong>TEXT, AUTHOR, PLATFORM, SOURCE_URL, N</strong>. From there they could move into clustering, sentiment analysis, score calculation and finally page generation.</p><p>This means scraping was not an isolated technical task. It was the first step of an SEO system where raw user language becomes <strong>structured review evidence</strong>. If a claim appeared in the page, it could be traced back to a source, a comment row, a cluster and a sentiment/scoring decision.</p><p>The pipeline also made future updates easier: new comments can be collected, normalized and validated with the same schema instead of rebuilding the method from zero each time a supplier page needs a refresh.</p>`
+        title: "Cost and quality logic",
+        body: `<p>The cost logic is simple: if a scraping tool produces many unusable rows, the real cost is not only the platform cost. It is also <strong>manual review time, cleaning time and discarded data</strong>. A better instruction layer can improve the cost-per-useful-comment because fewer scraped comments need to be deleted later.</p><p>The time-saving estimate was built only on comments that were <strong>on-topic but too generic</strong>: comments that a naive filter might have kept, but that the quality rules excluded because they lacked concrete detail. It does <strong>not</strong> count obvious spam, emoji, sponsorship noise or off-topic posts that would have been discarded anyway.</p><div class="process-flow process-flow--summary"><article><span>Solid base</span><p><strong>543 usable comments</strong> were delivered across <strong>12 suppliers</strong>, counted as real CSV records rather than inflated line counts.</p></article><article><span>Central estimate</span><p>The quality rules likely avoided reading and evaluating about <strong>815 generic comments</strong>, based on a 1.5x ratio against the useful final comments.</p></article><article><span>Time model</span><p>At roughly <strong>20 seconds per comment</strong> for reading and deciding if it was usable, that equals about <strong>4.5 hours saved</strong>.</p></article><article><span>Scaling</span><p>The average is around <strong>23 minutes saved per supplier</strong>; applying the same method to 20-30 suppliers would scale toward a full working day or more.</p></article></div><p>This is especially relevant for social sources. A generic query can return vague brand mentions, promotional comments or off-topic discussions. A targeted query pack can instead look for comments about <strong>assistance problems, high bills, app issues, switching supplier, activation delays or price comparisons</strong>.</p><p>That means the value of the workflow is not automation for automation's sake. The value is a more efficient funnel: <strong>better queries, fewer bad rows, faster validation, cleaner exports</strong> and a dataset that is easier to use inside the review-page system.</p>`
+      },
+      {
+        title: "How raw comments became review-ready inputs",
+        body: `<p>After collection and validation, comments were exported into the historical format used by the review project: <strong>TEXT, AUTHOR, PLATFORM, SOURCE_URL, N</strong>. From there they could move into clustering, sentiment analysis, score calculation and finally page generation.</p><p>The workflow kept strict safeguards: copy the <strong>full exact comment</strong>, avoid rewriting or translating it, preserve the URL, keep platform labels stable, deduplicate carefully and limit repeated comments from the same author.</p><p>This means scraping was not an isolated technical task. It was the first step of an SEO system where raw user language becomes <strong>structured review evidence</strong>. If a claim appeared in the page, it could be traced back to a source, a comment row, a cluster and a sentiment/scoring decision.</p>`
       }
     ],
+    hideKeyNumbers: true,
+    hideSnapshot: true,
     hideFutureData: true,
     hideExamples: true,
     performancePlaceholder: "",
@@ -572,14 +569,18 @@ const projectPortfolioMeta = {
     icon: "⌁",
     areas: ["technical"],
     topicTags: ["Scraping", "AI rules", "QA"],
-    cardSummary: "Clean comment pipeline for review evidence.",
+    cardSummary: "Scraping rules for cleaner review evidence.",
     story: {
-      main: "I built the <strong>data-collection layer</strong> behind the review system, focused on turning public social comments into review-ready evidence.",
-      problem: "Raw social data is noisy: <strong>spam, duplicates, referral codes, vague mentions, off-topic posts</strong> and comments without source value can weaken the final page.",
-      analysis: "The workflow used <strong>Codex, Claude Code and Apify-style instructions</strong> to define source priorities, exclusion rules, canonical fields and validation checks.",
-      insight: "Scraping was not the goal by itself. The real value was a <strong>clean, auditable evidence base</strong> that could feed clustering, sentiment and scoring without losing traceability.",
-      output: "Final output: <strong>source rules, normalized CSV exports, validation checks</strong> and a reusable path from raw comments to review-page inputs."
-    }
+      main: "I built the <strong>scraping and data-collection layer</strong> behind the review system, focused on turning public social comments into cleaner, traceable review evidence.",
+      problem: "Raw social scraping can be noisy and expensive: it often returns <strong>spam, referral codes, weak brand mentions, off-topic threads</strong> and comments that later need to be deleted.",
+      insight: "I used <strong>Apify through the Claude Code integration</strong> for the actual scraping workflow, while <strong>Codex</strong> helped structure the collection instructions. This let the scraper follow rules before the run: exclude bad rows, prioritize useful themes such as <strong>assistance, bills, tariffs, app, activation and switching</strong>, and preserve source fields for QA. The result was cleaner output, less manual control and better cost efficiency because fewer paid scraped rows were wasted.",
+      output: "Final output: reusable <strong>scraping rules, query packs, validation checks and normalized exports</strong> feeding clustering, sentiment analysis, scoring and review-page generation, with an estimated <strong>4.5 hours of manual reading/evaluation saved</strong> on the first 12 suppliers."
+    },
+    storySteps: [
+      ["Problem", "Raw social scraping can be noisy and expensive: it often returns <strong>spam, referral codes, weak brand mentions, off-topic threads</strong> and comments that later need to be deleted."],
+      ["Solution", "I used <strong>Apify through the Claude Code integration</strong> for the actual scraping workflow, while <strong>Codex</strong> helped structure the collection instructions. This let the scraper follow rules before the run: exclude bad rows, prioritize useful themes such as <strong>assistance, bills, tariffs, app, activation and switching</strong>, and preserve source fields for QA. The result was cleaner output, less manual control and better cost efficiency because fewer paid scraped rows were wasted."],
+      ["Output", "Final output: reusable <strong>scraping rules, query packs, validation checks and normalized exports</strong> feeding clustering, sentiment analysis, scoring and review-page generation, with an estimated <strong>4.5 hours of manual reading/evaluation saved</strong> on the first 12 suppliers."]
+    ]
   },
   offpage: {
     visualTheme: "content-seo",
@@ -1510,7 +1511,7 @@ function renderProjectStory(project) {
     `;
   }
 
-  const storyItems = [
+  const storyItems = project.storySteps || [
     ["Problem", project.story.problem],
     ["Analysis", project.story.analysis],
     ["Solution", project.story.insight],
@@ -1523,7 +1524,7 @@ function renderProjectStory(project) {
         <span>Summary</span>
         <p>${project.story.main}</p>
       </article>
-      <div class="project-summary-flow" aria-label="Project story flow">
+      <div class="project-summary-flow project-summary-flow--${storyItems.length}" aria-label="Project story flow">
         ${storyItems.map(([label, body], index) => `
           <article data-step="${String(index + 1).padStart(2, "0")}">
             <span>${label}</span>

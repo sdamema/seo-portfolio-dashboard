@@ -34,6 +34,7 @@ Each project detail should follow this order:
 - Avoid making claims that the data cannot support.
 - When a project has a corresponding source folder, read its README, skill/spec files and reference docs before deepening the portfolio copy.
 - Keep secondary projects lighter only when source examples, URLs or public performance data are still missing.
+- For the scraping project, describe the workflow precisely: **Apify** runs the scraping through Actors, **Claude Code** is the operating environment via the Apify integration, and **Codex** supports rules, instructions, query packs and QA logic.
 
 ## Home And CV Layout Rules
 
